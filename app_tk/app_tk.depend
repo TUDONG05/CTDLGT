@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1746588151 source:c:\users\khact\desktop\ctdlgt\app_tk\main.cpp
+	<iostream>
+	<iomanip>
+	<cstring>
+	<string>
+
