@@ -170,6 +170,31 @@ void chen(TRO &L, SinhVien sv, int k)
     P->next = M->next;
     M->next = P;
 }
+
+
+void sapXep(TRO &L)
+{
+    SinhVien tg;
+    TRO M, Q, R;
+    R = L;
+    while(R->next !=NULL)
+    {
+        M= R;
+        Q = R->next;
+        while(Q!=NULL)
+        {
+            if(Q->infor.ten <M->infor.ten)
+                M=Q;
+            Q=Q->next;
+
+        }
+        tg = R->infor;
+        R->infor = M->infor;
+        M->infor = tg;
+        R= R->next;
+    }
+}
+
 int main()
 {
     TRO L;
@@ -198,6 +223,10 @@ int main()
     chen(L,ss,3);
 
     cout<<"Danh sach sau khi chen:"<<endl;
+    inDS(L);
+
+    cout<<"Danh sach sap tang dan:"<<endl;
+    sapXep(L);
     inDS(L);
 }
 
