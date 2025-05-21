@@ -247,8 +247,6 @@ void sapBot(TRO &L)
 
 }
 
-
-
 int main()
 {
     TRO L;
